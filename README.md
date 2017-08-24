@@ -8,7 +8,7 @@ to use the ker2row optimization, just specified the "optimization" and "using_ap
 
 one example:
 ```
-ayer {
+layer {
   name: "conv2_1"
   type: "Convolution"
   bottom: "pool1"
