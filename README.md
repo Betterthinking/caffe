@@ -1,7 +1,7 @@
 # caffe-with-kn2row-optimization
 A temporary modified caffe framework to implement the kn2row optimization in base-conv layer
 
-Here is the corresponding paper: (Parallel Multi Channel Convolution using General Matrix Multiplication)
+Here is the corresponding paper: [Parallel Multi Channel Convolution using General Matrix Multiplication](https://arxiv.org/abs/1704.04428)
 
 # usage
 to use the ker2row optimization, just specified the "optimization" and "using_approximate" field in the conv_param
