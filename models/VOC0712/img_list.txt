@@ -1,0 +1,2 @@
+/home/yuxi/ker2col-caffe/examples/images/fish-bike.jpg
+

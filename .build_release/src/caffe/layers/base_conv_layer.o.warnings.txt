@@ -1,0 +1,61 @@
+src/caffe/layers/base_conv_layer.cpp:270:1: warning: multi-line comment [-Wcomment]
+ //  LOG(INFO) << " num " << col_buffer_shape_[1]\
+ ^
+src/caffe/layers/base_conv_layer.cpp: In member function ‘virtual void caffe::BaseConvolutionLayer<Dtype>::LayerSetUp(const std::vector<caffe::Blob<Dtype>*>&, const std::vector<caffe::Blob<Dtype>*>&)’:
+src/caffe/layers/base_conv_layer.cpp:19:35: error: ‘class caffe::ConvolutionParameter’ has no member named ‘using_approximate’
+   using_approximate_ = conv_param.using_approximate();
+                                   ^
+src/caffe/layers/base_conv_layer.cpp:20:3: error: ‘opt’ was not declared in this scope
+   opt = conv_param.optimization();
+   ^
+src/caffe/layers/base_conv_layer.cpp: In member function ‘virtual void caffe::BaseConvolutionLayer<Dtype>::Reshape(const std::vector<caffe::Blob<Dtype>*>&, const std::vector<caffe::Blob<Dtype>*>&)’:
+src/caffe/layers/base_conv_layer.cpp:215:6: error: ‘opt’ was not declared in this scope
+   if(opt==ConvolutionParameter_Optimization_KN2ROW)
+      ^
+In file included from ./include/caffe/common.hpp:6:0,
+                 from ./include/caffe/blob.hpp:8,
+                 from ./include/caffe/filler.hpp:10,
+                 from src/caffe/layers/base_conv_layer.cpp:4:
+src/caffe/layers/base_conv_layer.cpp:217:14: error: ‘kernel_shape_data’ was not declared in this scope
+     CHECK_EQ(kernel_shape_data[0],kernel_shape_data[1]);
+              ^
+src/caffe/layers/base_conv_layer.cpp:218:14: error: ‘kernel_shape_data’ was not declared in this scope
+     CHECK_EQ(kernel_shape_data[0]%2,1) << "in kn2row optimization, the kernel size should be odd";
+              ^
+src/caffe/layers/base_conv_layer.cpp:219:30: error: ‘kernel_shape_data’ was not declared in this scope
+     delta = static_cast<int>(kernel_shape_data[0]/(2*(bottom[0]->height()))) + 1;
+                              ^
+src/caffe/layers/base_conv_layer.cpp: In instantiation of ‘void caffe::BaseConvolutionLayer<Dtype>::Reshape(const std::vector<caffe::Blob<Dtype>*>&, const std::vector<caffe::Blob<Dtype>*>&) [with Dtype = float]’:
+src/caffe/layers/base_conv_layer.cpp:526:1:   required from here
+src/caffe/layers/base_conv_layer.cpp:224:9: warning: unused variable ‘delta’ [-Wunused-variable]
+     int delta = 0;
+         ^
+src/caffe/layers/base_conv_layer.cpp:266:7: warning: unused variable ‘ih’ [-Wunused-variable]
+   int ih = input_shape(1);
+       ^
+src/caffe/layers/base_conv_layer.cpp:267:7: warning: unused variable ‘kw’ [-Wunused-variable]
+   int kw = this->blobs_[0]->shape(3);
+       ^
+src/caffe/layers/base_conv_layer.cpp:268:7: warning: unused variable ‘ic’ [-Wunused-variable]
+   int ic = input_shape(0);
+       ^
+src/caffe/layers/base_conv_layer.cpp:269:7: warning: unused variable ‘ow’ [-Wunused-variable]
+   int ow = output_shape_[1];
+       ^
+src/caffe/layers/base_conv_layer.cpp: In instantiation of ‘void caffe::BaseConvolutionLayer<Dtype>::Reshape(const std::vector<caffe::Blob<Dtype>*>&, const std::vector<caffe::Blob<Dtype>*>&) [with Dtype = double]’:
+src/caffe/layers/base_conv_layer.cpp:526:1:   required from here
+src/caffe/layers/base_conv_layer.cpp:224:9: warning: unused variable ‘delta’ [-Wunused-variable]
+     int delta = 0;
+         ^
+src/caffe/layers/base_conv_layer.cpp:266:7: warning: unused variable ‘ih’ [-Wunused-variable]
+   int ih = input_shape(1);
+       ^
+src/caffe/layers/base_conv_layer.cpp:267:7: warning: unused variable ‘kw’ [-Wunused-variable]
+   int kw = this->blobs_[0]->shape(3);
+       ^
+src/caffe/layers/base_conv_layer.cpp:268:7: warning: unused variable ‘ic’ [-Wunused-variable]
+   int ic = input_shape(0);
+       ^
+src/caffe/layers/base_conv_layer.cpp:269:7: warning: unused variable ‘ow’ [-Wunused-variable]
+   int ow = output_shape_[1];
+       ^
