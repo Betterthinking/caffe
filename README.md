@@ -43,7 +43,7 @@ layer {
   }
 }
 ```
-to use im2col optimization, just replace `KN2ROW` with `IM2COL` or delete this field in prototxt file, the defualt value is `IM2COL`. To obtain approximate results in ker2row mode, set using_approximate to be `true` otherwise set it to be `false` to obtain precise results. The using_approximate field is useful only when optimzation is `KN2ROW`.
+to use im2col optimization, just replace `KN2ROW` with `IM2COL` or delete this field in prototxt file, the defualt value is `IM2COL`. To obtain approximate results in ker2row mode, set using_approximate to be `true` otherwise set it to be `false` to obtain approximate results if acceptable. The using_approximate field is useful only when optimzation is `KN2ROW`.
 
 # note
 the current optimization is only implemented in forward operations and it does not support model training.
