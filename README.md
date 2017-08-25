@@ -4,7 +4,7 @@ A temporary modified caffe framework to implement the kn2row optimization in bas
 Here is the corresponding paper: [Parallel Multi Channel Convolution using General Matrix Multiplication](https://arxiv.org/abs/1704.04428)
 
 # prerequisition
-* the basic dependencies is required
+* the basic dependencies for caffe is required, see the doc file
 * OpenCV 2.4.9 and above
 * for BLAS, OpenBLAS or Intel MKL is recommanded
 
